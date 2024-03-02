@@ -1,0 +1,68 @@
+.table {
+    border-collapse: collapse;
+    /*border: 2px solid black;*/
+    width: 720px;
+    height: 300px;
+    margin: 0 auto;
+}
+th {
+    border: 2px solid black;
+    width: 20%;
+}
+tr {
+    border: 2px solid black;
+    text-align: center;
+}
+td {
+    border: 2px solid;
+}
+.modalBye {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 99998;
+    background-color: rgba(0, 0, 0, .3);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity.6s, visibility.6s;
+}
+.bye {
+    position: relative;
+    max-width: 500px;
+    padding: 45px;
+    z-index: 1;
+    background-color: white;
+    transform: scale(0);
+    transition: transform .8s;
+    border-radius: 4px;
+}
+.modalBye.open {
+    visibility: visible;
+    opacity: 1;
+}
+.modalBye.open .bye {
+    transform: scale(1);
+}
+.close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border: none;
+    background-color: transparent;
+    padding: 5px;
+    cursor: pointer;
+}
+.ok {
+    position: absolute;
+    bottom: 10px;
+    left: 77px;
+    width: 100px;
+}
+.hide {
+    background-color: gray;
+}
